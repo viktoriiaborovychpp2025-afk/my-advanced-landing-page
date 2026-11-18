@@ -47,6 +47,13 @@
     field.addEventListener("blur", updateInvalidState);
   });
 
+  form.addEventListener("reset", () => {
+    message.setCustomValidity("");
+    form.querySelectorAll("input, textarea").forEach((field) => {
+      field.removeAttribute("aria-invalid");
+    });
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     updateMessageValidity();
@@ -60,6 +67,7 @@
   });
 
   closeButton.addEventListener("click", () => {
+    form.reset();
     dialog.close();
   });
 
