@@ -23,6 +23,47 @@
 
   <!-- Підключення основних стилів проєкту -->
   <link rel="stylesheet" href="css/style.css">
+
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <style>
+      .reviews-swiper .swiper-pagination-bullet {
+        background-color: #9EAC9C;
+        opacity: 0.4;
+        transition: all 0.2s ease;
+      }
+      .reviews-swiper .swiper-pagination-bullet-active {
+        background-color: #526B5A;
+        opacity: 1;
+        transform: scale(1.25);
+      }
+      .reviews-swiper .swiper-button-prev,
+      .reviews-swiper .swiper-button-next {
+        width: 44px;
+        height: 44px;
+        border-radius: 9999px;
+        background-color: #ffffff;
+        color: #526B5A;
+        box-shadow: 0 4px 12px rgba(82, 107, 90, 0.18);
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .reviews-swiper .swiper-button-prev:hover,
+      .reviews-swiper .swiper-button-next:hover {
+        background-color: #526B5A;
+        color: #ffffff;
+      }
+      .reviews-swiper .swiper-button-prev::after,
+      .reviews-swiper .swiper-button-next::after {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
 </head>
 <body>
   <!-- Посилання для пропуску навігації (WCAG 2.4.1) -->
@@ -113,6 +154,7 @@
           <h1 id="hero-title">Простір для вашого спокою та самопідтримки</h1>
           <p class="hero__description">
             Розкажіть, що відчуваєте, і отримайте швидку вправу для самопочуття: дихання або приємні звуки.
+            <span id="typed-text" class="text-[#526B5A]"></span>
           </p>
           <a class="button transition-colors transition-shadow duration-200 hover:!bg-[#9DB5C6] hover:!border-[#9DB5C6] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5F806E]" href="#mood">Почати <span aria-hidden="true">→</span></a>
         </div>
@@ -382,6 +424,236 @@
       </div>
     </section>
 
+    <!-- Слайдер відгуків -->
+    <section class="max-w-6xl mx-auto py-14 px-2 sm:px-6" aria-labelledby="reviews-title">
+      <h2 id="reviews-title" class="text-2xl sm:text-3xl font-bold text-center text-[#3d4a42] mb-2">
+        Відгуки наших користувачів
+      </h2>
+      <p class="text-center text-[#526B5A] mb-10">
+        Історії тих, хто вже знайшов спокій разом із нами
+      </p>
+
+      <div class="swiper reviews-swiper px-2 pb-14">
+        <div class="swiper-wrapper">
+          <!-- Слайд 1 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Дихальні практики 4-7-8 стали моїм вечірнім ритуалом. Вперше за
+                роки я засинаю без телефона в руках і прокидаюся справді
+                відпочилою.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#9EAC9C] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">ОК</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Олена Коваленко</p>
+                  <p class="text-sm text-[#526B5A]">Студентка, 24 роки</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Слайд 2 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Аудіо-релакс «Ліс після дощу» рятує мене між робочими
+                зустрічами. Десять хвилин — і тривога відступає, голова стає
+                ясною.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#526B5A] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">ДМ</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Дмитро Мельник</p>
+                  <p class="text-sm text-[#526B5A]">Продакт-менеджер</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Слайд 3 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Я скептично ставилася до медитацій, але коротка практика
+                «Квадрат дихання» перед екзаменом творить дива. Тепер практика
+                з собою щодня.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#9EAC9C] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">МС</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Марія Шевченко</p>
+                  <p class="text-sm text-[#526B5A]">Вчителька історії</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Слайд 4 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Вечірній сеанс аудіо-релаксу — найкраще, що траплялося з моїм
+                сном. А ранкова дихальна практика заряджає спокійніше за каву.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#526B5A] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">АБ</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Андрій Бондаренко</p>
+                  <p class="text-sm text-[#526B5A]">Інженер-програміст</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Слайд 5 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Після народження дитини я постійно була напружена.
+                П'ятихвилинні аудіо-релакси стали моїми «п'ятьма хвилинами для
+                себе» — із голосом, що заспокоює.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#9EAC9C] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">ІЛ</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Ірина Лисенко</p>
+                  <p class="text-sm text-[#526B5A]">Мама у декреті</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <!-- Слайд 6 -->
+          <div class="swiper-slide h-auto">
+            <article class="bg-white rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25 p-7 h-full flex flex-col gap-5">
+              <div class="flex gap-1 text-[#526B5A]" role="img" aria-label="Рейтинг 5 з 5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+              </div>
+              <blockquote class="text-[#4b5850] leading-relaxed grow">
+                «Дихальна практика перед складними перемовинами допомогла мені
+                говорити впевнено й без суєти. Клієнти відчули різницю — і я
+                теж.»
+              </blockquote>
+              <footer class="flex items-center gap-4">
+                <span class="w-12 h-12 rounded-full bg-[#526B5A] text-white flex items-center justify-center font-semibold text-lg shrink-0" aria-hidden="true">ТГ</span>
+                <div>
+                  <p class="font-semibold text-[#3d4a42]">Тарас Гриценко</p>
+                  <p class="text-sm text-[#526B5A]">Підприємець</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+
+        <div class="swiper-pagination reviews-pagination"></div>
+        <button type="button" class="swiper-button-prev reviews-prev" aria-label="Попередній відгук"></button>
+        <button type="button" class="swiper-button-next reviews-next" aria-label="Наступний відгук"></button>
+      </div>
+    </section>
+
+    <!-- Галерея спокійних просторів -->
+    <section class="max-w-6xl mx-auto py-14 px-2 sm:px-6" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="text-2xl sm:text-3xl font-bold text-center text-[#3d4a42] mb-2">
+        Місця, що повертають тишу
+      </h2>
+      <p class="text-center text-[#526B5A] mb-10">
+        Натисніть на зображення, щоб відкрити його повністю і розглянути деталі
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a
+          href="images/forest-morning.svg"
+          data-fancybox="calm-gallery"
+          data-caption="Ранковий туман у лісі — повільне дихання серед дерев допомагає відновити внутрішню тишу після напруженого дня."
+          class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25"
+        >
+          <img
+            src="images/forest-morning.svg"
+            alt="Туманний ліс на світанку"
+            class="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105 cursor-zoom-in"
+            loading="lazy"
+          />
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3d4a42]/80 to-transparent p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            Відновлення у ранковому лісі
+          </span>
+        </a>
+
+        <a
+          href="images/quiet-lake.svg"
+          data-fancybox="calm-gallery"
+          data-caption="Тихе озеро без хвиль — кілька хвилин споглядання нерухомої води заспокоюють думки не гірше за медитацію."
+          class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25"
+        >
+          <img
+            src="images/quiet-lake.svg"
+            alt="Тихе озеро серед пагорбів"
+            class="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105 cursor-zoom-in"
+            loading="lazy"
+          />
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3d4a42]/80 to-transparent p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            Тиша на березі озера
+          </span>
+        </a>
+
+        <a
+          href="images/calm-meadow.svg"
+          data-fancybox="calm-gallery"
+          data-caption="М'яке вечірнє світло на лузі — прогулянка повільним кроком і звук трави допомагають розслабитися перед сном."
+          class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#9EAC9C]/25"
+        >
+          <img
+            src="images/calm-meadow.svg"
+            alt="Спокійний луг у м'якому вечірньому світлі"
+            class="w-full h-64 object-cover transition-transform duration-500 ease-out group-hover:scale-105 cursor-zoom-in"
+            loading="lazy"
+          />
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3d4a42]/80 to-transparent p-4 text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            Релаксація у вечірньому лузі
+          </span>
+        </a>
+      </div>
+    </section>
+
     <section class="bg-[#F2F1ED] px-4 py-16 sm:px-6 lg:py-20" id="feedback" aria-labelledby="feedback-title">
       <div class="mx-auto max-w-3xl">
         <div class="mb-8 text-center">
@@ -539,5 +811,65 @@
   <script src="js/practice-tools.js" defer></script>
   <script src="js/header.js" defer></script>
   <script src="js/validation.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      new Typed('#typed-text', {
+        strings: ['швидка самодопомога', 'тиша і рівновага', 'підтримка щодня'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+      });
+
+      new Swiper('.reviews-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 3500,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.reviews-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.reviews-next',
+          prevEl: '.reviews-prev',
+        },
+        breakpoints: {
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      Fancybox.bind('[data-fancybox="calm-gallery"]', {
+        animated: true,
+        showClass: 'f-fadeIn',
+        hideClass: 'f-fadeOut',
+        Toolbar: {
+          display: {
+            left: ['counter'],
+            middle: [],
+            right: ['close'],
+          },
+        },
+        Images: {
+          Panzoom: {
+            zoom: true,
+            maxScale: 3,
+          },
+        },
+        Captions: {
+          placement: 'bottom',
+        },
+      });
+    </script>
 </body>
 </html>

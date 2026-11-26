@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Тихе озеро серед пагорбів">
+  <defs>
+    <linearGradient id="lake-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2F1ED"/>
+      <stop offset="1" stop-color="#E3E9E1"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B7C8BA"/>
+      <stop offset="1" stop-color="#8FA697"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#lake-sky)"/>
+  <circle cx="400" cy="180" r="58" fill="#F6E7D7"/>
+  <path d="M0 340 Q180 240 360 320 T800 300 V340 Z" fill="#9EAC9C"/>
+  <path d="M420 340 Q560 260 800 330 V340 Z" fill="#7E9484"/>
+  <rect y="340" width="800" height="260" fill="url(#water)"/>
+  <ellipse cx="400" cy="380" rx="46" ry="10" fill="#F6E7D7" opacity="0.7"/>
+  <g stroke="#F2F1ED" stroke-width="4" stroke-linecap="round" opacity="0.45">
+    <line x1="140" y1="430" x2="300" y2="430"/>
+    <line x1="480" y1="470" x2="680" y2="470"/>
+    <line x1="220" y1="520" x2="430" y2="520"/>
+    <line x1="540" y1="560" x2="700" y2="560"/>
+  </g>
+</svg>
