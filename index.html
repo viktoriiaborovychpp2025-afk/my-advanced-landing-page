@@ -668,8 +668,8 @@
           <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div>
               <label class="mb-2 block text-sm font-medium text-[#000000]" for="feedback-name">Ім’я <span aria-hidden="true">*</span></label>
-              <input class="peer min-h-12 w-full rounded-lg border border-[#D5D8D2] bg-white px-4 py-3 text-base text-[#000000] outline-none transition hover:border-[#9EAC9C] focus-visible:border-[#9EAC9C] focus-visible:ring-2 focus-visible:ring-[#9EAC9C]/30 peer-[&:user-invalid]:border-[#C86D61] peer-[&:user-invalid]:bg-[#FDF6F4] peer-[&:user-valid]:border-[#9EAC9C] peer-[&:user-valid]:bg-[#F7FAF6]" id="feedback-name" name="name" type="text" autocomplete="name" required aria-describedby="feedback-name-error">
-              <p class="mt-1 hidden text-sm text-[#B75D52] peer-[&:user-invalid]:block" id="feedback-name-error">Будь ласка, введіть ім’я.</p>
+              <input class="min-h-12 w-full rounded-lg border border-[#D5D8D2] bg-white px-4 py-3 text-base text-[#000000] outline-none transition hover:border-[#9EAC9C] focus-visible:border-[#9EAC9C] focus-visible:ring-2 focus-visible:ring-[#9EAC9C]/30 aria-[invalid=true]:border-[#C86D61] aria-[invalid=true]:bg-[#FDF6F4]" id="feedback-name" name="name" type="text" autocomplete="name" required aria-describedby="feedback-name-error" aria-invalid="false">
+              <p class="mt-1 hidden text-sm text-[#B75D52]" id="feedback-name-error">Будь ласка, введіть ім’я.</p>
             </div>
 
             <div>
